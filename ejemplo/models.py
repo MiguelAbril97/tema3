@@ -24,7 +24,7 @@ class Libros(models.Model):
     tipo =models.CharField(
         max_length=2,
         choices=IDIOMAS,
-        default="ES",
+        default="IT",
     )
     
     autores=models.ManyToManyField(Autor)
@@ -50,6 +50,8 @@ class Prestamos (models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     libro = models.ForeignKey(Libros, on_delete=models.CASCADE)
     fecha_prestamo = models.DateTimeField(default=timezone.now)
+    
+
 
 
     

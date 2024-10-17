@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1> Libro</h1>
+        <div>
+            <h2> Nombre: {{libro_mostrar.nombre}} </h2>
+            <h2> Biblioteca: {{libro_mostrar.biblioteca.nombre}} </h2>
+            <h2> Autores:</h2>
+            <ul>
+                {%for autor in libro_mostrar.autores.all%}  
+                <li>{{ autor.nombre}}</li>
+                {%endfor%}
+            </ul>
+
+            <p>
+                <h3> Fecha de Publicacion: </h3>{{libro_mostrar.fecha_publicacion}}
+            </p>
+
+            <p>
+            <h3>Descripcion: </h3>{{libro_mostrar.descripcion}}
+            </p>
+
+            <p>Idioma {{libro_mostrar.tipo}}</p>
+
+        <div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1> Biblioteca Online </h1>
+    <h2> Enlaces </h2>
+    <ul>
+        <li><a href="{%url 'listar_libros'%}" target='_blank'>Libros</a></li>
+        <li><a href="{%url 'dame_libro' 10 %}" target='_blank'>Escoger un libro</a></li>
+        <li><a href="{%url 'dame_libros_fecha' 2015 8 %}" target='_blank'>Escoger un libro por fecha</a></li>
+        <li><a href="{%url 'dame_libros_idioma' "ES" %}" target='_blank'>Escoger un libro por fecha</a></li>
+    </ul>
+
+</body>
+</html>
